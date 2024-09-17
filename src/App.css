@@ -1,0 +1,203 @@
+.App {
+  text-align: center;
+  background: url('/public/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.App h1 {
+  font-family: Arial, sans-serif; /* Especifica una fuente estándar */
+  color: white; /* Cambia el color del texto a blanco */
+  text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue; /* Simula un borde azul alrededor del texto */
+  padding: 10px; /* Añade un poco de espacio alrededor del texto */
+  margin-top: 20px; /* Separa un poco el título del borde superior */
+  background-color: transparent; /* Fondo transparente */
+  display: inline-block; /* Asegura que el borde abarque solo el contenido del h1 */
+}
+
+
+
+p {
+  color: white;
+}
+
+.audio-controls {
+  margin-bottom: 20px;
+}
+
+.game-board {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: url('/public/images/billie.jpg') no-repeat center center;
+  background-size: cover;
+  border: 5px solid black;
+  margin: 0 auto;
+}
+
+.snake-container, .snake-segment, .food {
+  position: absolute;
+}
+
+.snake-segment, .food {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.snake-segment {
+  background-color: green;
+}
+
+.food {
+  background-color: red;
+}
+
+.game-over {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game-over h2 {
+  margin: 0;
+}
+
+.game-over button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.controls-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.control-button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  background-color: #ddd;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-button:active {
+  background-color: #bbb;
+}
+
+.control-button span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 0;
+}
+
+.control-button.up span {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid black;
+}
+
+.control-button.down span {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid black;
+}
+
+.control-button.left span {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid black;
+}
+
+.control-button.right span {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid black;
+}
+
+@media (max-width: 600px) {
+  .control-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+audio {
+  display: none;
+}
+
+.start-button, .restart-button {
+  background-color: #28a745; /* Fondo verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espacio interior del botón */
+  font-size: 18px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones para efectos de hover */
+}
+
+.start-button:hover, .restart-button:hover {
+  background-color: #218838; /* Color verde más oscuro al pasar el ratón */
+}
+
+.start-button:active, .restart-button:active {
+  transform: scale(0.98); /* Efecto de presionar el botón */
+}
+
+.upload-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-label {
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #218838; 
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espacio interior del botón */
+  font-size: 18px; 
+}
+
+.upload-label input[type="file"] {
+  display: none;
+}
+

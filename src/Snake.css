@@ -1,0 +1,18 @@
+/* src/Snake.css */
+.snake-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .snake-segment {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green; /* Default color if no image */
+    background-size: cover;
+    background-position: center;
+  }
+  
