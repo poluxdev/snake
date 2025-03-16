@@ -190,7 +190,8 @@ const App = () => {
 
   return (
     <div className="App" tabIndex="0">
-      <h1>Si te sirve de algo, nunca es muy tarde para ser quien tú quieras ser. No hay límite de tiempo; empieza cuando quieras. Puedes cambiar o seguir igual. La vida no tiene reglas.</h1>
+      <h1>Hay que trabajar, hay que aprender, hay que comer, hay que descansar y también hay que jugar.</h1>
+
       <div className="audio-controls">
         <VolumeControl audioRef={audioRef} />
         <p>Tiempo de Reproducción: {formatTime(elapsedTime)}</p>
